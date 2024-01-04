@@ -1,6 +1,5 @@
 from pygame import mixer 
 from termcolor import colored
-from pygame import mixer 
 
 import requests
 import os
