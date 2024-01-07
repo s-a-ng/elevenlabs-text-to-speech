@@ -44,6 +44,12 @@ def get_voices(elevenapikey):
     parsed_voices = { }
     voices = requests.get("https://api.elevenlabs.io/v1/voices", headers=headers).json()
 
+    details = voices.get("detail")
+
+    if details and details.get("status"):
+        print(colored(details.get("message"), "red"))
+        exit()
+    
     voices = voices['voices']
     
     print(colored("Available voices: ", "blue"))
