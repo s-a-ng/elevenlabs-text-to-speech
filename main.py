@@ -132,6 +132,6 @@ while True:
     voice_audio = elevenlabs_tts(text)
 
     if not voice_audio:
-        print(colored("Failed to play audio", "red"))
-
+        print(colored("Failed to process audio", "red"))
+        continue
     play_audio(voice_audio)
